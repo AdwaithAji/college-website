@@ -1,0 +1,363 @@
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 6% 80px;
+    background: #F7F1E5;
+    color: #292421;
+}
+
+.about-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Section heading */
+.about-heading {
+    max-width: 760px;
+    margin: 0 auto 46px;
+    text-align: center;
+}
+
+.about-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #702A3A;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.about-heading h2 {
+    margin: 0;
+    color: #54202E;
+    font-family: 'Merriweather', serif;
+    font-size: clamp(30px, 3.4vw, 46px);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.about-heading h2 span {
+    color: #8B5A50;
+}
+
+.about-subtitle {
+    max-width: 600px;
+    margin: 18px auto 0;
+    color: #75675F;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Main two-column layout */
+.about-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 48px;
+}
+
+/* Campus image */
+.about-image-wrap {
+    position: relative;
+    min-width: 0;
+    height: 410px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(84, 32, 46, 0.12);
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.about-image-wrap:hover .about-image {
+    transform: scale(1.035);
+}
+
+.about-image-label {
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 22px;
+    background: #702A3A;
+    color: #FFFFFF;
+    border-radius: 0 6px 6px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.about-label-line {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: #F7F1E5;
+}
+
+/* Story text */
+.about-content {
+    min-width: 0;
+}
+
+.about-content .about-eyebrow {
+    margin-bottom: 8px;
+}
+
+.about-content h3 {
+    margin: 0 0 20px;
+    color: #54202E;
+    font-family: 'Merriweather', serif;
+    font-size: clamp(26px, 2.5vw, 34px);
+    line-height: 1.4;
+}
+
+.about-content > p {
+    margin: 0 0 14px;
+    color: #5E5750;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    color: #702A3A;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.about-link span {
+    transition: transform 0.2s ease;
+}
+
+.about-link:hover {
+    color: #54202E;
+}
+
+.about-link:hover span {
+    transform: translateX(4px);
+}
+
+/* Four values */
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 26px;
+    margin-top: 54px;
+    padding: 32px 0;
+    border-top: 1px solid #E1D3C0;
+    border-bottom: 1px solid #E1D3C0;
+}
+
+.about-value {
+    min-width: 0;
+}
+
+.about-value-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: #F0E2D8;
+    color: #702A3A;
+}
+
+.about-value-icon svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.about-value h4 {
+    margin: 0 0 8px;
+    color: #54202E;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.about-value p {
+    margin: 0;
+    color: #75675F;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* College facts bar */
+.about-facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 36px;
+    padding: 28px 12px;
+    border: 1px solid #E5D1BE;
+    border-radius: 8px;
+    background: rgba(255, 250, 240, 0.55);
+}
+
+.about-fact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 4px 22px;
+    border-right: 1px solid #E1D3C0;
+}
+
+.about-fact:last-child {
+    border-right: none;
+}
+
+.about-fact-label {
+    margin-bottom: 8px;
+    color: #8B5A50;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.about-fact strong {
+    color: #54202E;
+    font-family: 'Merriweather', serif;
+    font-size: clamp(15px, 1.5vw, 20px);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.about-fact-detail {
+    margin-top: 5px;
+    color: #75675F;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .about-main {
+        gap: 30px;
+    }
+
+    .about-image-wrap {
+        height: 360px;
+    }
+
+    .about-values {
+        gap: 18px;
+    }
+
+    .about-fact {
+        padding: 4px 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .about-section {
+        padding: 48px 20px 54px;
+    }
+
+    .about-heading {
+        margin-bottom: 32px;
+    }
+
+    .about-heading h2 {
+        font-size: 30px;
+    }
+
+    .about-subtitle {
+        font-size: 14px;
+    }
+
+    .about-main {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .about-image-wrap {
+        height: 290px;
+    }
+
+    .about-content h3 {
+        font-size: 27px;
+    }
+
+    .about-content > p {
+        font-size: 13px;
+    }
+
+    .about-values {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 20px;
+        margin-top: 38px;
+        padding: 28px 0;
+    }
+
+    .about-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 0;
+        padding: 24px 10px;
+    }
+
+    .about-fact {
+        padding: 4px 12px;
+    }
+
+    .about-fact:nth-child(2) {
+        border-right: none;
+    }
+
+    .about-fact strong {
+        font-size: 16px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+    .about-heading h2 {
+        font-size: 26px;
+    }
+
+    .about-image-wrap {
+        height: 240px;
+    }
+
+    .about-values {
+        gap: 24px 14px;
+    }
+
+    .about-fact {
+        padding: 4px 8px;
+    }
+}

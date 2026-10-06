@@ -1,0 +1,183 @@
+.rank-admin-management {
+    display: grid;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+.rank-admin-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.rank-admin-heading h2 {
+    margin: 0;
+    color: #54202E;
+}
+
+.rank-admin-heading p {
+    margin: 6px 0 0;
+    color: #75675F;
+    line-height: 1.6;
+}
+
+
+/* Add form */
+
+.rank-admin-form {
+    display: grid;
+    gap: 10px;
+    padding: 24px;
+    background: #FFFDF9;
+    border: 1px solid #D9C9B6;
+    border-radius: 12px;
+}
+
+.rank-admin-form h3 {
+    margin: 0 0 8px;
+    color: #54202E;
+}
+
+.rank-admin-form label {
+    color: #54202E;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rank-admin-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #D9C9B6;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #302522;
+    font: inherit;
+}
+
+.rank-admin-form input:focus {
+    outline: 2px solid #702A3A;
+    outline-offset: 1px;
+}
+
+
+/* Rank + Year */
+
+.rank-admin-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.rank-admin-form-row > div {
+    display: grid;
+    gap: 10px;
+}
+
+
+/* Selected image */
+
+.rank-selected-file {
+    margin: 2px 0;
+    color: #75675F;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+
+/* Existing rank holders */
+
+.rank-admin-list {
+    display: grid;
+    gap: 14px;
+}
+
+.rank-admin-list-items {
+    display: grid;
+    gap: 12px;
+}
+
+
+/* Rank holder card */
+
+.rank-admin-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px;
+    background: #FFFDF9;
+    border: 1px solid #D9C9B6;
+    border-radius: 10px;
+}
+
+.rank-admin-card-image {
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #EFE4D2;
+}
+
+.rank-admin-card-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.rank-admin-card-rank {
+    color: #A47C22;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.rank-admin-card h4 {
+    margin: 6px 0;
+    color: #54202E;
+    font-family: "Merriweather", serif;
+    font-size: 17px;
+    overflow-wrap: anywhere;
+}
+
+.rank-admin-card p {
+    margin: 0 0 6px;
+    color: #75675F;
+    font-size: 13px;
+}
+
+.rank-admin-card small {
+    color: #75675F;
+    font-size: 12px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .rank-admin-heading {
+        align-items: flex-start;
+    }
+
+    .rank-admin-form {
+        padding: 16px;
+    }
+
+    .rank-admin-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .rank-admin-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .rank-admin-card .notice-delete-button {
+        margin-left: 103px;
+    }
+}

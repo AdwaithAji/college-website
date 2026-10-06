@@ -1,0 +1,299 @@
+/* Hero slideshow container */
+.hero-container {
+    position: relative;
+    isolation: isolate;
+
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+
+    width: 100%;
+    height: 575px;
+    box-sizing: border-box;
+    padding: 40px 48px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Smoother visual movement */
+    transition:
+        background-position 1s ease,
+        transform 0.4s ease;
+
+    will-change: background-position;
+}
+
+/* Dark overlay over the background image */
+.hero-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: -1;
+    pointer-events: none;
+
+    /* Keeps overlay visually smooth */
+    transition: background-color 0.6s ease;
+}
+
+
+/* Welcome text on the right */
+.hero-content {
+    min-width: 0;
+    width: 100%;
+    max-width: 850px;
+    justify-self: start;
+
+    color: #FFFFFF;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+    /* Smooth content movement */
+    animation: heroContentFade 0.8s ease;
+}
+
+
+/* Smooth entrance for hero content */
+@keyframes heroContentFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero-content h3 {
+    margin: 0 0 18px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #F7F1E5;
+}
+
+
+.hero-content h2 {
+    margin: 0 0 18px;
+
+    font-family: 'Merriweather', serif;
+    font-size: clamp(32px, 3.5vw, 52px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+
+.hero-content p {
+    margin: 0;
+
+    font-family: 'Merriweather', serif;
+    font-size: clamp(17px, 2vw, 24px);
+    font-style: italic;
+    line-height: 1.5;
+    color: #F7F1E5;
+}
+
+
+/* Hero button */
+.hero-content button {
+    margin-top: 24px;
+    padding: 14px 26px;
+
+    background-color: #702A3A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.hero-content button:hover {
+    background-color: #54202E;
+    transform: translateY(-1px);
+}
+
+
+.hero-content button:active {
+    transform: translateY(0);
+}
+
+
+/* Slideshow dots */
+.hero-dots {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+
+.hero-dots button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+
+    border: 1.5px solid #FFFFFF;
+    border-radius: 50%;
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.35s ease,
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+
+.hero-dots button:hover {
+    transform: scale(1.15);
+}
+
+
+.hero-dots button.active {
+    background: #FFFFFF;
+    transform: scale(1.1);
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .hero-container {
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 24px;
+
+        height: 540px;
+        padding: 32px 24px;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 650px) {
+
+    .hero-container {
+        grid-template-columns: minmax(0, 1fr);
+        align-content: center;
+        gap: 28px;
+
+        height: auto;
+        min-height: 700px;
+        padding: 36px 20px 60px;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-dots {
+        bottom: 20px;
+    }
+}
+
+
+/* Accessibility: respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-container,
+    .hero-container::before,
+    .hero-content,
+    .hero-content button,
+    .hero-dots button {
+        animation: none;
+        transition: none;
+    }
+}
+/* Hero slideshow container */
+.hero-container {
+    position: relative;
+    isolation: isolate;
+
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+
+    width: 100%;
+    height: 575px;
+    box-sizing: border-box;
+    padding: 40px 48px;
+
+    overflow: hidden;
+    background-color: #54202E;
+}
+
+/* Hero image layers */
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: opacity 0.8s ease-in-out;
+
+    z-index: -2;
+}
+
+.hero-image.active {
+    opacity: 1;
+}
+
+.hero-image.previous {
+    opacity: 0;
+}
+
+/* Dark overlay */
+.hero-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: -1;
+    pointer-events: none;
+}

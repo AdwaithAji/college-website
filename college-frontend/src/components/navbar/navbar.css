@@ -1,0 +1,186 @@
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px 24px;
+    background-color: #EFE4D2;
+    border-bottom: 1px solid #D9C9B6;
+    color: var(--color-maroon-dark);
+}
+
+/* College logo and name */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+#college-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.college-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#college-name {
+    font-family: "Merriweather", serif;
+    font-size: 22px;
+    margin: 0;
+    line-height: 1.1;
+    color: var(--color-maroon);
+}
+
+#college-slogan {
+    font-size: 8px;
+    margin: 2px 0 0;
+    line-height: 1.2;
+    color: var(--color-muted);
+}
+
+#college-location {
+    font-size: 10px;
+    margin: 2px 0 0;
+    line-height: 1.2;
+    color: var(--color-muted);
+}
+
+/* Navigation links */
+.navbar-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.navbar-contents a {
+    position: relative;
+    padding: 8px 0;
+    color: var(--color-maroon-dark);
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.navbar-contents a:hover {
+    color: var(--color-maroon);
+}
+
+.navbar-contents a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-maroon);
+    transition: width 0.2s ease;
+}
+
+.navbar-contents a:hover::after {
+    width: 100%;
+}
+
+/* Login, Admin Panel and Logout buttons */
+.navbar-login-button {
+    flex-shrink: 0;
+    padding: 10px 22px;
+    border: 1px solid #702A3A;
+    border-radius: 6px;
+    background: #702A3A;
+    color: #F7F1E5;
+    font: inherit;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 160ms ease;
+}
+
+.navbar-login-button:hover {
+    background: #54202E;
+}
+
+.navbar-login-button:focus-visible {
+    outline: 3px solid #A66A78;
+    outline-offset: 3px;
+}
+
+/* Keep Admin Panel and Logout together */
+.navbar-admin-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .navbar-contents {
+        order: 3;
+        flex-basis: 100%;
+        flex: 1 0 100%;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+    }
+
+    .navbar-login-button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 10px 14px;
+        gap: 12px;
+    }
+
+    #college-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    #college-name {
+        font-size: 18px;
+    }
+
+    #college-slogan {
+        font-size: 7px;
+    }
+
+    #college-location {
+        font-size: 9px;
+    }
+
+    .navbar-contents {
+        gap: 12px 18px;
+    }
+
+    .navbar-contents a {
+        font-size: 13px;
+    }
+
+    .navbar-login-button {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+
+    .navbar-admin-actions {
+        gap: 6px;
+    }
+}
+
